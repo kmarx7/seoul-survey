@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Seoul Story Guide Travel Experience Survey"
+  >
+
+  <title>Seoul Story Guide Survey</title>
+
+  <style>
+    :root {
+      --background: #f2eee6;
+      --text: #181818;
+      --muted: #777;
+      --border: #dcd8d1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+
+      background: var(--background);
+      color: var(--text);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        max(24px, env(safe-area-inset-top))
+        22px
+        max(28px, env(safe-area-inset-bottom));
+    }
+
+    .page {
+      width: 100%;
+      max-width: 520px;
+
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 0.24em;
+
+      color: #707070;
+
+      margin-bottom: 42px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 11vw, 62px);
+
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+
+      font-weight: 750;
+
+      margin-bottom: 30px;
+    }
+
+    .intro-ko {
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      color: #555;
+
+      margin-bottom: 42px;
+    }
+
+    .language-label {
+      font-size: 17px;
+
+      line-height: 1.65;
+
+      margin-bottom: 8px;
+    }
+
+    .language-label-ko {
+      font-size: 15px;
+
+      color: #777;
+
+      margin-bottom: 26px;
+    }
+
+    .buttons {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 14px;
+    }
+
+    .button {
+      width: 100%;
+
+      display: block;
+
+      padding: 20px 18px;
+
+      border-radius: 15px;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+    }
+
+    .button:active {
+      transform: scale(0.985);
+      opacity: 0.9;
+    }
+
+    .button-ko {
+      background: #171717;
+      color: #fff;
+    }
+
+    .button-en {
+      background: transparent;
+      color: #171717;
+
+      border: 1px solid var(--border);
+    }
+
+    .button-title {
+      display: block;
+
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .button-sub {
+      display: block;
+
+      margin-top: 5px;
+
+      font-size: 13px;
+      font-weight: 400;
+
+      opacity: 0.7;
+    }
+
+    .time {
+      margin-top: 28px;
+
+      font-size: 14px;
+
+      color: #888;
+    }
+
+    .divider {
+      width: 42px;
+      height: 1px;
+
+      margin: 38px auto 26px;
+
+      background: #d9d5ce;
+    }
+
+    .footer {
+      font-size: 13px;
+
+      line-height: 1.75;
+
+      color: #888;
+    }
+
+    .footer-ko {
+      margin-top: 14px;
+    }
+
+    .copyright {
+      margin-top: 26px;
+
+      font-size: 12px;
+
+      color: #aaa;
+    }
+
+    @media (max-width: 430px) {
+      body {
+        align-items: flex-start;
+
+        padding:
+          max(42px, env(safe-area-inset-top))
+          20px
+          max(30px, env(safe-area-inset-bottom));
+      }
+
+      .brand {
+        margin-top: 18px;
+        margin-bottom: 42px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .intro-ko {
+        font-size: 16px;
+      }
+
+      .button {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="brand">
+      SEOUL STORY GUIDE
+    </div>
+
+    <h1>
+      How do you<br>
+      experience Seoul?
+    </h1>
+
+    <div class="intro-ko">
+      서울을 여행하고 둘러보는<br>
+      여러분의 경험을 들려주세요.
+    </div>
+
+    <div class="language-label">
+      Please select your language.
+    </div>
+
+    <div class="language-label-ko">
+      설문에 사용할 언어를 선택해주세요.
+    </div>
+
+
+    <div class="buttons">
+
+      <a
+        class="button button-ko"
+        href="https://docs.google.com/forms/d/1KSzb4Hj_fiWzOCftFxKBMFsXEPml5l54FtiEa14o8a8/viewform"
+      >
+        <span class="button-title">
+          한국어
+        </span>
+
+        <span class="button-sub">
+          한국어 설문 시작
+        </span>
+      </a>
+
+
+      <a
+        class="button button-en"
+        href="https://docs.google.com/forms/d/1FLHjKhNB58JtLZRVsNXlk6ZcTFDeWIDTcqfJk3S3Ih4/viewform"
+      >
+        <span class="button-title">
+          English
+        </span>
+
+        <span class="button-sub">
+          Start the survey in English
+        </span>
+      </a>
+
+    </div>
+
+
+    <div class="time">
+      About 3–4 minutes · 약 3–4분
+    </div>
+
+
+    <div class="divider"></div>
+
+
+    <div class="footer">
+
+      Your responses will help us understand
+      how people discover and experience Seoul.
+
+      <div class="footer-ko">
+        여러분의 응답은 사람들이 서울의 장소를
+        어떻게 탐색하고 경험하는지 이해하는 데 활용됩니다.
+      </div>
+
+      <div class="copyright">
+        © Seoul Story Guide
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
