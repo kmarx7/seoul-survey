@@ -20,7 +20,9 @@
       --background: #f2eee6;
       --text: #181818;
       --muted: #777;
-      --border: #dcd8d1;
+      --border: #d8d4cd;
+      --black: #171717;
+      --white: #ffffff;
     }
 
     * {
@@ -63,179 +65,131 @@
     .page {
       width: 100%;
       max-width: 520px;
-
       text-align: center;
     }
 
     .brand {
       font-size: 13px;
       font-weight: 700;
-
       letter-spacing: 0.24em;
-
       color: #707070;
-
       margin-bottom: 42px;
     }
 
     h1 {
       font-size: clamp(42px, 11vw, 62px);
-
       line-height: 0.98;
-
       letter-spacing: -0.055em;
-
       font-weight: 750;
-
       margin-bottom: 30px;
     }
 
     .intro-ko {
       font-size: 17px;
-
       line-height: 1.7;
-
       color: #555;
-
       margin-bottom: 42px;
     }
 
     .language-label {
       font-size: 17px;
-
       line-height: 1.65;
-
       margin-bottom: 8px;
     }
 
     .language-label-ko {
       font-size: 15px;
-
       color: #777;
-
       margin-bottom: 26px;
     }
 
     .buttons {
       width: 100%;
-
       display: flex;
       flex-direction: column;
-
       gap: 14px;
     }
 
     .button {
       width: 100%;
-
       display: block;
 
       padding: 20px 18px;
 
       border-radius: 15px;
+      border: 1px solid var(--border);
+
+      background: var(--white);
+      color: var(--black);
 
       text-decoration: none;
 
       transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
         transform 0.15s ease,
-        opacity 0.15s ease;
+        box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.14);
+    }
+
+    .button:focus-visible {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+
+      outline: 2px solid var(--black);
+      outline-offset: 3px;
     }
 
     .button:active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+
       transform: scale(0.985);
-      opacity: 0.9;
     }
-
-    ..button {
-  width: 100%;
-  display: block;
-
-  padding: 20px 18px;
-
-  border-radius: 15px;
-  border: 1px solid #d8d4cd;
-
-  background: transparent;
-  color: #171717;
-
-  text-decoration: none;
-
-  transition:
-    background-color 0.22s ease,
-    color 0.22s ease,
-    border-color 0.22s ease,
-    transform 0.15s ease,
-    box-shadow 0.22s ease;
-}
-
-.button:hover {
-  background: #171717;
-  color: #ffffff;
-  border-color: #171717;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.button:focus-visible {
-  background: #171717;
-  color: #ffffff;
-  border-color: #171717;
-
-  outline: 2px solid #171717;
-  outline-offset: 3px;
-}
-
-.button:active {
-  background: #171717;
-  color: #ffffff;
-  border-color: #171717;
-
-  transform: scale(0.985);
-}
 
     .button-title {
       display: block;
-
       font-size: 20px;
       font-weight: 700;
     }
 
     .button-sub {
       display: block;
-
       margin-top: 5px;
-
       font-size: 13px;
       font-weight: 400;
-
       opacity: 0.7;
     }
 
     .time {
       margin-top: 28px;
-
       font-size: 14px;
-
       color: #888;
     }
 
     .divider {
       width: 42px;
       height: 1px;
-
       margin: 38px auto 26px;
-
       background: #d9d5ce;
     }
 
     .footer {
       font-size: 13px;
-
       line-height: 1.75;
-
       color: #888;
     }
 
@@ -245,9 +199,7 @@
 
     .copyright {
       margin-top: 26px;
-
       font-size: 12px;
-
       color: #aaa;
     }
 
@@ -307,7 +259,6 @@
       설문에 사용할 언어를 선택해주세요.
     </div>
 
-
     <div class="buttons">
 
       <a
@@ -322,7 +273,6 @@
           한국어 설문 시작
         </span>
       </a>
-
 
       <a
         class="button"
@@ -339,14 +289,11 @@
 
     </div>
 
-
     <div class="time">
       About 3–4 minutes · 약 3–4분
     </div>
 
-
     <div class="divider"></div>
-
 
     <div class="footer">
 
