@@ -146,17 +146,55 @@
       opacity: 0.9;
     }
 
-    .button-ko {
-      background: #171717;
-      color: #fff;
-    }
+    ..button {
+  width: 100%;
+  display: block;
 
-    .button-en {
-      background: transparent;
-      color: #171717;
+  padding: 20px 18px;
 
-      border: 1px solid var(--border);
-    }
+  border-radius: 15px;
+  border: 1px solid #d8d4cd;
+
+  background: transparent;
+  color: #171717;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.15s ease,
+    box-shadow 0.22s ease;
+}
+
+.button:hover {
+  background: #171717;
+  color: #ffffff;
+  border-color: #171717;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.button:focus-visible {
+  background: #171717;
+  color: #ffffff;
+  border-color: #171717;
+
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
+
+.button:active {
+  background: #171717;
+  color: #ffffff;
+  border-color: #171717;
+
+  transform: scale(0.985);
+}
 
     .button-title {
       display: block;
@@ -273,7 +311,7 @@
     <div class="buttons">
 
       <a
-        class="button button-ko"
+        class="button"
         href="https://docs.google.com/forms/d/1KSzb4Hj_fiWzOCftFxKBMFsXEPml5l54FtiEa14o8a8/viewform"
       >
         <span class="button-title">
@@ -287,7 +325,7 @@
 
 
       <a
-        class="button button-en"
+        class="button"
         href="https://docs.google.com/forms/d/1FLHjKhNB58JtLZRVsNXlk6ZcTFDeWIDTcqfJk3S3Ih4/viewform"
       >
         <span class="button-title">
